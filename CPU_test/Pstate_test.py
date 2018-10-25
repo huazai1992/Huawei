@@ -41,10 +41,12 @@ def main(num):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="your script description")
     parser.add_argument('--ops-number')
+    parser.add_argument('--run-time')
 
     args = parser.parse_args()
     num = args.ops_number
+    time = args.run_time
     cProfile.run(
-        'main({})'.format(num),"./CPU_test_result/Pstate_ops{}_enable.out".format(num))
+        'main({})'.format(num),"./CPU_test_result/Pstate_ops{}_time{}_enable.out".format(num, time))
     # p = pstats.Stats("./CPU_test_result/Pstate_ops{}_powersave_disable.out".format(num))
     # p.strip_dirs().sort_stats('cumtime').print_stats()
