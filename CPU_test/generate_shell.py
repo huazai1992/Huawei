@@ -1,7 +1,7 @@
 
 base_num = 10000000
 num_list = [base_num * i * 2 for i in range(1, 6)]
-time = 10
+time = 5
 
 with open("Pstate_test.sh", 'w') as f_out:
     for i in range(1, time+1):

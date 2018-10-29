@@ -47,6 +47,6 @@ if __name__ == '__main__':
     num = args.ops_number
     time = args.run_time
     cProfile.run(
-        'main({})'.format(num),"./CPU_test_result/Pstate_ops{}_time{}_enable.out".format(num, time))
+        'main({})'.format(num),"./CPU_test_result/Pstate_ops{}_time{}_disable.out".format(num, time))
     # p = pstats.Stats("./CPU_test_result/Pstate_ops{}_powersave_disable.out".format(num))
     # p.strip_dirs().sort_stats('cumtime').print_stats()
